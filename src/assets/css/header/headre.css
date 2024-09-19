@@ -1,2 +1,7 @@
 .header {
 }
+.headerbackground{
+    background-color: #fff;
+    border-radius: 4;
+    box-shadow: 4;
+}
