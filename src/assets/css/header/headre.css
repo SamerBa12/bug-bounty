@@ -1,2 +1,16 @@
+@import "../../../index.css";
 .header {
+	font-family: var(--font-primary);
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	padding: 16px 64px;
+}
+.img-logo {
+	width: 131px;
+	height: 48px;
+}
+.login-btn {
+	display: flex;
+	gap: 16px;
 }

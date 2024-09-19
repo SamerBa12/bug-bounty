@@ -1,22 +1,34 @@
 import React from "react";
-import { Button } from "@mantine/core";
 import vectorImage from '../assets/image/Vector.png'
+import '../assets/css/header/headre.css'
+import ButtonMantine from "./button/ButtonMantine";
 
 const header = () => {
+
   return (
-    <div className="header">
+    <div className="header container-fluid ">
       <div className="header-btn">
         <div className="login-btn">
-          <Button variant="outline" color="#b21222">
-            دخول
-          </Button>
-          <Button variant="filled" color="#b21222">
-            سجل مجانا
-          </Button>
+          <ButtonMantine
+            type='outline'
+            color='var(--main-color)'
+            title='دخول'
+            width='61px'
+            height='50px'
+
+          />
+          <ButtonMantine
+            type='filled'
+            color='var(--main-color)'
+            title='سجّل مجاناً'
+            width='99px'
+            height='50px'
+          />
+
         </div>
-        <div className="logo">
-        <img src={vectorImage} alt="logo" className="img-logo" /> 
-            </div>
+      </div>
+      <div className="logo">
+        <img src={vectorImage} alt="logo" className="img-logo" />
       </div>
     </div>
   );
