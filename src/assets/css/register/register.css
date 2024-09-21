@@ -13,7 +13,10 @@ input::placeholder{
             
 .form{
 display: grid;
-grid-column: 2;
+
+}
+.box-form{
+  grid-column: 2;
 grid-row: 3;
 }
 .sectionimage{
