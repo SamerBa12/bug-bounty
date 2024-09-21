@@ -1,0 +1,46 @@
+* {
+    font-family: "Cairo";
+  }
+  .container{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+input::placeholder{
+  text-align: right;
+ 
+
+}
+            
+.form{
+display: grid;
+grid-column: 2;
+grid-row: 3;
+}
+.sectionimage{
+  width: 450px;
+
+}
+.flexrow{
+  display: flex;
+  padding-top: 20px;
+
+}
+.contain{
+  /* display: flex;
+  justify-content: start; */
+}
+.title,.tabs{
+  direction: rtl !important;
+  font-family: "Cario";
+}
+.registerform{
+  text-align: right !important;
+  text-align:end !important; 
+  text-justify: distribute-all-lines;
+  color: aqua;
+  border:10px ;
+  width: 300px;
+}
+.tabs{
+padding-top: 20px;
+}

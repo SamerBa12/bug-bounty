@@ -1,16 +1,17 @@
 import { RouterProvider } from 'react-router-dom'
-import './App.css'
 import { router } from './routes/router'
 import { MantineProvider } from '@mantine/core'
+import '@mantine/core/styles.css';
+
 
 
 function App() {
 
   return (
     <>
-    <MantineProvider>
+    <MantineProvider >
       <RouterProvider router={router} />
-      </MantineProvider>
+     </MantineProvider>
     </>
   )
 }
