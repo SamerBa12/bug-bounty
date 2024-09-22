@@ -1,12 +1,11 @@
 * {
-    font-family: "Cairo" !important;
-    
-  }
-  .container{
-    margin-left: 30px;
-    margin-right: 30px;
+	font-family: "Cairo" !important;
+}
+.container {
+	margin-left: 30px;
+	margin-right: 30px;
 }
 :root {
-  --main-button-color: #cc432b;
-  --secondary-button-color: #ffffff;
+	--main-button-color: #cc432b;
+	--secondary-button-color: #ffffff;
 }
