@@ -10,28 +10,34 @@ import { BsPerson } from "react-icons/bs"
 export const Register = () => {
     return (
         <>
-            <Box className="title">
-                <Title order={3} >مرحباً بك في Bug Bounty</Title>
-                <Title order={6} className="secondtitle" >يرجى التسجيل للمتايعة</Title>
-            </Box>
-            <div className="container d-flex flex-row-reverse">
-                <div className="right container">
+            <div className="container d-flex flex-row-reverse my-4 justify-content-center py-4" >
+                <Paper shadow="xl" p="xl" className="right w-75 mx-3 p-2   ">
+                    <Box className="title d-flex flex-column justify-content-center align-items-center gap-1">
+                        <Title order={3} >مرحباً بك في Bug Bounty</Title>
+                        <Title order={6} className="secondtitle" >يرجى التسجيل للمتايعة</Title>
+                    </Box>
                     <Box className="tabs">
-                        <Tabs color="red" variant="pills" defaultValue="gallery">
-                            <Tabs.List>
-                                <Tabs.Tab value="gallery" >
-                                    التسجيل كباحث أمني
-                                </Tabs.Tab>
-                                <Tabs.Tab value="messages" data-disabled >
-                                    التسجيل كشركة جديدة
-                                </Tabs.Tab>
+                        <Tabs color="red" variant="pills" defaultValue="gallery" className="py-4">
+                            <Tabs.List className="d-flex justify-content-center w-100 g-5 ">
+                                <div className="headerRegister d-flex gap-5">
+                                    <div className="registerAsCyber ">
+                                        <Tabs.Tab value="gallery" style={{ width: '300px', height: '40px', fontSize: '20px' }} >
+                                            التسجيل كباحث أمني
+                                        </Tabs.Tab>
+                                        <hr />
+                                    </div>
+                                    <div className="registerAsCompany" >
+
+                                        <Tabs.Tab value="messages" style={{ width: '300px', height: '40px', fontSize: '20px' }} >
+                                            التسجيل كشركة جديدة
+                                        </Tabs.Tab>
+                                        <hr />
+                                    </div>
+                                </div>
 
                             </Tabs.List>
-                            <hr />
                             <Tabs.Panel value="gallery">
                                 <RegisterForm />
-
-
                             </Tabs.Panel>
 
                             <Tabs.Panel value="messages">
@@ -41,21 +47,10 @@ export const Register = () => {
                         </Tabs>
                     </Box>
 
-                </div>
-                <div className="left">
+                </Paper>
 
-                    <Image src={sectionimage} alt="image" className="sectionimage" />
-
-
-
-                </div>
             </div>
-            <Box className="container flexrow">
 
-
-
-
-            </Box >
 
 
         </>
