@@ -58,6 +58,12 @@ export const RegisterCompany = ({ name, domaincompany, numberemploye, password, 
           <AgreePrivacy />
         </div>
         <div className="buttonBottom d-flex justify-content-center align-items-center gap-4 my-0">
+        <Buttonn
+            title="تسجيل الدخول "
+            color="red"
+            variant="outline"
+            size="md"
+          />
           <Buttonn
             variant="filled"
             color="red"
@@ -65,12 +71,7 @@ export const RegisterCompany = ({ name, domaincompany, numberemploye, password, 
             size="md"
             className="m-3"
           />
-          <Buttonn
-            title="تسجيل الدخول "
-            color="red"
-            variant="outline"
-            size="md"
-          />
+         
         </div>
       </form>
     </div>

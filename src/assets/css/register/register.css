@@ -33,12 +33,44 @@ input::placeholder {
     font-family: "Cairo";
 }
 
-.backgroun {
-    background-image: url("../../image/background.png");
-    background-color: #a8a6a654;
+/* .backgroun {
+    background-image: url("../../image/backgroun.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	
+	background-size:120%;
+	background-blend-mode: darken;
+	width: 100%;
     z-index: 0;
-}
+	position: relative;
+} */
 
+.backgroun {
+	position: relative; /* ضروري لتفعيل z-index للعنصر الأب */
+	width: 100%;
+	height: 400px;
+	background-image: url("../../image/backgroun.png");
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .backgroun::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(224, 224, 224, 0.425); /* لون الخلفية مع الشفافية */
+	z-index: 1; /* تضع الطبقة الشفافة فوق الخلفية */
+  }
+  
+  .backgroun-content {
+	position: relative;
+	z-index: 2; /* تضمن أن المحتوى يظهر فوق الطبقة الشفافة */
+	
+  }
+  
 select.data {
     text-align: right !important;
 }

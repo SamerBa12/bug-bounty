@@ -8,6 +8,7 @@ import '../../assets/css/register/register.css';
 export const Register = () => {
     return (
         <div className="backgroun">
+      <div className="backgroun-content">
             <Header />
             <div className="container my-4 justify-content-center py-4">
                 <Paper shadow="xl" p="xl" className="form-paper w-75 mx-3 p-4">
@@ -34,6 +35,7 @@ export const Register = () => {
                         </Tabs>
                     </Box>
                 </Paper>
+            </div>
             </div>
         </div>
     );

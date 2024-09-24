@@ -1,20 +1,26 @@
-import { Image, Group, Paper, Box } from '@mantine/core';
-import logo from '../../assets/image/header/Vector.png';
-import { Buttonn } from '../Button/Button';
-import '../../assets/css/header/headre.css';
+import { Image, Group, Paper, Box } from "@mantine/core";
+import logo from "../../assets/image/header/Vector.png";
+import { Buttonn } from "../Button/Button";
+import "../../assets/css/header/headre.css";
+import { Login } from "../../pages/Login/Login";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
-    return (
-        <Paper className='custom-box'>
-            <Box className="flex-between-center container">
-                <Group>
-                    <Buttonn title="دخول" className="btn-white" />
-                    <Buttonn title="سجل مجانا" className="btn-danger" />
-                </Group>
-                <Box className="flex-align-center">
-                    <Image src={logo} alt="Logo" className='custom-size' />
-                </Box>
-            </Box>
-        </Paper>
-    );
+
+  return (
+    <Paper className="custom-box">
+      <Box className="flex-between-center container">
+        <Group>
+          <Buttonn
+            title="دخول"
+            className="btn-white"
+          />
+          <Buttonn title="سجل مجانا" className="btn-danger" />
+        </Group>
+        <Box className="flex-align-center">
+          <Image src={logo} alt="Logo" className="custom-size" />
+        </Box>
+      </Box>
+    </Paper>
+  );
 };
