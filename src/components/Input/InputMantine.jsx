@@ -4,11 +4,12 @@ import React from 'react'
 const InputMantine = ({
     icon,
     placeholder,
-    size
+    size , 
+    dir
 }) => {
     return (
         <div dir="rtl">
-            <Input size={size} placeholder={placeholder} rightSection={icon} />
+            <Input size={size} placeholder={placeholder} rightSection={icon} dir={dir} />
         </div>
     )
 }

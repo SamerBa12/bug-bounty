@@ -1,4 +1,4 @@
-import { Checkbox, Select } from "@mantine/core";
+import { Box, Checkbox, Select } from "@mantine/core";
 import InputMantine from "../Input/InputMantine";
 import AgreePrivacy from "../AgreePrivacy/AgreePrivacy";
 import { Buttonn } from "../Button/Button";
@@ -9,7 +9,14 @@ import pass from "../../assets/image/header/icon/pass.svg";
 import person from "../../assets/image/header/icon/name.svg";
 import "../../assets/css/register/register.css";
 
-export const RegisterCompany = ({ name, domaincompany, numberemploye, password, typecompany, email }) => {
+export const RegisterCompany = ({
+  name,
+  domaincompany,
+  numberemploye,
+  password,
+  typecompany,
+  email,
+}) => {
   return (
     <div className="register-company-container">
       <form className="form w-100 gap-3">
@@ -17,17 +24,22 @@ export const RegisterCompany = ({ name, domaincompany, numberemploye, password, 
           <div className="inputForm d-flex flex-column w-100 w-md-50 gap-3 p-4">
             <InputMantine
               size={"lg"}
+              dir="rtl"
+
               icon={<img src={domain} alt="domain" />}
               placeholder="أدخل دومين الشركة *"
             />
+            <Box dir="rtl" > 
             <Select
               size={"lg"}
               placeholder="أختر نوع الشركة *"
               data={[
-                { value: 'شركة خاصة', label: 'شركة خاصة' },
-                { value: 'شركة حكومية', label: 'شركة حكومية' },
+                { value: "شركة خاصة", label: "شركة خاصة" },
+                { value: "شركة حكومية", label: "شركة حكومية" },
               ]}
-            />
+              />
+              </Box>
+
             <InputMantine
               size={"lg"}
               icon={<img src={mail} alt="mail" />}
@@ -58,7 +70,7 @@ export const RegisterCompany = ({ name, domaincompany, numberemploye, password, 
           <AgreePrivacy />
         </div>
         <div className="buttonBottom d-flex justify-content-center align-items-center gap-4 my-0">
-        <Buttonn
+          <Buttonn
             title="تسجيل الدخول "
             color="red"
             variant="outline"
@@ -71,7 +83,6 @@ export const RegisterCompany = ({ name, domaincompany, numberemploye, password, 
             size="md"
             className="m-3"
           />
-         
         </div>
       </form>
     </div>
