@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import {Register}  from '../pages/Register/Register'
 import {Login} from '../pages/Login/Login'
+import HomePage from "../pages/HomePage/HomePage";
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     element: <Login />,
     name: "login"
   },
+  {
+    path:"/home-page",
+    element:<HomePage/>,
+    name:"home-page"
+  }
  
 ];
 
