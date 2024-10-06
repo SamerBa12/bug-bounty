@@ -3,8 +3,42 @@ import mail from "../../assets/image/header/icon/mail.svg";
 import pass from "../../assets/image/header/icon/pass.svg";
 import { Buttonn } from "../Button/Button";
 import { ResetPassword } from "../ResetPassword/ResetPassword";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { apiLoginCompany } from "../../apis/company/Compani";
 
-export const LoginForm = ({ email, Password }) => {
+export const LoginForm = () => {
+  const navigate = useNavigate()
+  const [ login , setLogin ] = useState({ 
+    email: "" , 
+    password : ''
+  })
+
+  const handleChange =(e) => { 
+    const { name , value } = e.target
+    setLogin((pre) => ({ 
+      ...pre , [name]: value
+    }))
+  } 
+
+  const [ error , setError ] = useState('')
+
+  
+const handleSubmit = () => { 
+  const subLogin = async () => { 
+    try{ 
+      const response = await apiLoginCompany(login)
+      setError(response)
+      const token = localStorage.getItem('token')
+      token ? 
+      navigate('/home-page')
+      : console.log('error')
+    } catch(err) { 
+      console.error(err)
+    }
+  }
+  subLogin()
+}
   return (
     <div>
       <div >
@@ -16,11 +50,17 @@ export const LoginForm = ({ email, Password }) => {
                 size={"lg"}
                 icon={<img src={mail} alt="mail" />}
                 placeholder="أدخل البريد الإلكتروني *"
+                name='email'
+                value={login.email}
+                handleChange={handleChange}
               />
               <InputMantine
                 size={"lg"}
                 icon={<img src={pass} alt="pass" />}
                 placeholder="أدخل كلمة المرور *"
+                name='password'
+                value={login.password}
+                handleChange={handleChange}
               />
             </div>
           </div>
@@ -36,8 +76,10 @@ export const LoginForm = ({ email, Password }) => {
               title="انشاء حساب "
               size="md"
               className="m-3"
+              onClick={()=> navigate('/')}
             />
             <Buttonn
+            onClick={handleSubmit}
               variant="filled"
               title="تسجيل الدخول "
               color="red"

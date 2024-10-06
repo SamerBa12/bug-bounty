@@ -4,8 +4,11 @@ import { RegisterCompany } from "../../components/Forms/RegisterCompany";
 import { Header } from "../../components/Header/Header";
 import '../../assets/css/root/root.css';
 import '../../assets/css/register/register.css';
+import { useState } from "react";
 
 export const Register = () => {
+
+    
     return (
         <div className="backgroun">
       <div className="backgroun-content">

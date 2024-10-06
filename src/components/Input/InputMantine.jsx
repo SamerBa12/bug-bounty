@@ -5,11 +5,14 @@ const InputMantine = ({
     icon,
     placeholder,
     size , 
-    dir
+    dir , 
+    value , 
+    name , 
+    handleChange
 }) => {
     return (
         <div dir="rtl">
-            <Input size={size} placeholder={placeholder} rightSection={icon} dir={dir} />
+            <Input size={size} placeholder={placeholder} rightSection={icon} dir={dir} name={name} value={value} onChange={handleChange}/>
         </div>
     )
 }
