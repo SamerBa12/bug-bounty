@@ -37,6 +37,7 @@ const handleSubmit = () => {
     try{ 
        const response = await apiRegisterCompany(company)
         setErr(response)
+      
         navigate('/login')
       } catch(err){ 
         console.log(err)
