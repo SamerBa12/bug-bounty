@@ -5,9 +5,9 @@ import { Buttonn } from "../Button/Button";
 import { ResetPassword } from "../ResetPassword/ResetPassword";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { apiLoginCompany } from "../../apis/company/Compani";
+import { apiLoginResearcher } from "../../apis/researcher/Researcher";
 
-export const LoginForm = () => {
+export const LoginReForm = () => {
   const navigate = useNavigate()
   const [ login , setLogin ] = useState({ 
     email: "" , 
@@ -27,11 +27,11 @@ export const LoginForm = () => {
 const handleSubmit = () => { 
   const subLogin = async () => { 
     try{ 
-      const response = await apiLoginCompany(login)
+      const response = await apiLoginResearcher(login)
       setError(response)
       const token = localStorage.getItem('token')
       token ? 
-      navigate('/company-home-page')
+      navigate('/researcher-home-page')
       : console.log('error')
     } catch(err) { 
       console.error(err)
@@ -42,7 +42,16 @@ const handleSubmit = () => {
   return (
     <div>
       <div >
-        <form className="form w-100 gap-3"> 
+        <form
+        
+        
+        
+        
+        
+        
+        
+        
+        className="form w-100 gap-3"> 
             <div className="container-sm">
           <div className=" d-flex  flex-wrap gap-2">
             <div className=" d-flex flex-column w-75 mx-auto w-md-50 gap-3  p-4">

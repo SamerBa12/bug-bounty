@@ -1,9 +1,9 @@
 import { Box, Paper, Title } from "@mantine/core";
 
 import "../../assets/css/register/register.css";
-import { LoginForm } from "../../components/Forms/LoginForm";
+import { LoginReForm } from "../../components/Forms/LoginReForm";
 
-export const Login = () => {
+export const LoginResearcher = () => {
   return (
     <div className="backgroun">
       <div className="backgroun-content">
@@ -17,7 +17,7 @@ export const Login = () => {
               </Title>
             </Box>
             <Box>
-              <LoginForm />
+              <LoginReForm/>
             </Box>
           </Paper>
         </div>

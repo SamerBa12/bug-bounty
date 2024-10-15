@@ -1,9 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import {Register}  from '../pages/Register/Register'
 import {Login} from '../pages/Login/Login'
-import HomePage from "../pages/HomePage/HomePage";
+
 import PersonalInfoRe from "../pages/PersonaInfo/PersonalInfoRe";
 import { CodeRegister } from "../components/Forms/CodeRegister";
+import { LoginReForm } from "../components/Forms/LoginReForm";
+import HomePage from "../pages/researcher/ResearcherHomePage";
+// import HomePageComp from "../pages/company/HomePageComp";
+import ResearcherHomePage from "../pages/researcher/ResearcherHomePage";
+import CompanyHomePage from "../pages/company/CompanyHomePage";
 
 const routes = [
   {
@@ -17,14 +22,24 @@ const routes = [
     name: "login"
   },
   {
+    path: "/login-researcher",
+    element: <LoginReForm />,
+    name: "login"
+  },
+  {
     path: "/register-code",
     element: <CodeRegister/>,
     name: "login"
   },
   {
-    path:"/home-page",
-    element:<HomePage/>,
-    name:"home-page"
+    path:"/company-home-page",
+    element:<CompanyHomePage/>,
+    name:"company-home-page"
+  },
+  {
+    path:"/researcher-home-page",
+    element:<ResearcherHomePage/>,
+    name:"/researcher-home-page"
   },
   
   {

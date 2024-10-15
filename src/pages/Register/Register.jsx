@@ -1,7 +1,7 @@
 import { Box, Title, Paper, Tabs } from "@mantine/core";
 import { RegisterForm } from "../../components/Forms/RegisterForm";
 import { RegisterCompany } from "../../components/Forms/RegisterCompany";
-import { Header } from "../../components/Header/Header";
+
 import '../../assets/css/root/root.css';
 import '../../assets/css/register/register.css';
 import { useState } from "react";
@@ -12,7 +12,7 @@ export const Register = () => {
     return (
         <div className="backgroun">
       <div className="backgroun-content">
-            <Header />
+          
             <div className="container my-4 justify-content-center py-4">
                 <Paper shadow="xl" p="xl" className="form-paper w-75 mx-3 p-4">
                     <Box className="title d-flex flex-column justify-content-center align-items-center gap-1">

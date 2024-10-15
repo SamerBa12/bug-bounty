@@ -3,7 +3,7 @@ import { IconBookmark, IconWorld, IconArrowRight } from "@tabler/icons-react";
 import { BsBookmark, BsArrowUpLeftSquare } from "react-icons/bs";
 import { PiUsers, PiBuilding } from "react-icons/pi";
 import "../../assets/fonts/Zain/Zain-Black.ttf";
-export function CardForm({ logo, name, webSite, description, users, type }) {
+export function CardForm({ logo, name, webSite, description, users, type ,rate}) {
   return (
     <Paper>
       <Card withBorder radius="md" p="md" mt={'20'} style={{ width:'304px',height:'400px' }}>

@@ -3,16 +3,16 @@ import "../../assets/fonts/Zain/Zain-Bold.ttf";
 import { CardForm } from "../../components/Forms/CardForm";
 
 import { useEffect } from "react";
-import InputMantine from "../../components/Input/InputMantine";
 import { CiFilter } from "react-icons/ci";
 import { Header } from "../../components/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
-import {resetFilters, searchCompany} from '../../redux/sliceCompanies'
+import {fetchCompanies, resetFilters, searchCompany} from '../../redux/sliceCompanies'
 import { useState } from "react";
-import { Form } from "react-bootstrap";
 import { IconX } from "@tabler/icons-react";
+import { ApiHomePageResearcher } from "../../apis/researcher/ApiHomePageResearcher";
 
-const HomePage = () => {
+
+const ResearcherHomePage = () => {
   const AllCompanies=useSelector((state)=> state.sliceCompanies.companies);
   const filteredCompanies=useSelector((state)=> state.sliceCompanies.filterdCompanies)
   const companiesToDisplay= filteredCompanies.length > 0 ? filteredCompanies : AllCompanies
@@ -25,6 +25,20 @@ const HomePage = () => {
     setSearchQuery('');
     dispatch (resetFilters())
   }
+ 
+  useEffect(()=>{
+    const fetchData = async ()=>{
+      try{
+        const fetchApiHomePage = await ApiHomePageResearcher()
+
+        dispatch(fetchCompanies(fetchApiHomePage.companies))
+        console.log(fetchApiHomePage.companies)
+      }catch(err){
+        console.error(err)
+      }
+    }
+    fetchData()
+  },[])
   return (
     <div className="backgroun">
       <div className="backgroun-content">
@@ -119,7 +133,7 @@ const HomePage = () => {
             {companiesToDisplay.map((card, index) => (
               <CardForm
                 key={index}
-                logo={card.logo}
+                logo={card.image}
                 name={card.name}
                 webSite={card.webSite}
                 description={card.description}
@@ -135,4 +149,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ResearcherHomePage;

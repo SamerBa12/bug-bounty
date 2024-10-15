@@ -35,7 +35,7 @@ export const CodeRegister = () => {
       try{
         const response= await ApiAddCode(uuid,codeR)
         setErr(response)
-        navigate('/login')
+        navigate('/login-researcher')
       }
       catch(err){
        console.log(err)
